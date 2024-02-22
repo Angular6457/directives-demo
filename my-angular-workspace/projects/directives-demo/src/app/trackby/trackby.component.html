@@ -1,0 +1,23 @@
+<p class="heading">trackby example</p>
+
+
+<div class="container">
+    <h2>trackBy function</h2>
+    <div class="mt-4">
+        <button class="btn btn-primary" (click)="UpdateClick()">Update</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+            </tr>           
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of products;trackBy:TrackChanges">
+                <td>{{x.Name}}</td>
+                <td>{{x.Price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+<h1>ngfor-properties works!</h1>
+<div class="container">
+    <h2>NgFor Properties</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Preview</th>
+                <th>Index</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Even</th>
+                <th>Odd</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr [class.even]="e" [class.odd]="o" *ngFor="let product of products;let i=index;let f=first;let l=last;let e=even;let o=odd">
+                <td>
+                    <img [src]="product.image" width="100px" height="100px" alt="">
+                </td>
+                <td>{{i}}</td>
+                <td>{{f}}</td>
+                <td>{{l}}</td>
+                <td>{{e}}</td>
+                <td>{{o}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

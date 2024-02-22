@@ -1,0 +1,24 @@
+<p class="text-align:center">ngfor example nasa </p>
+<div class="container">
+    <h2>Mars Obejct Data</h2>
+    <table class="table hover">
+        <thead>
+            <tr>
+                <th>PhotoID</th>
+                <th>Preview</th>
+                <th>Camera</th>
+                <th>Rover</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of marsObject.photos">
+                <td>{{data.id}}</td>
+                <td>
+                    <img [src]="data.img_src" height="50px" width="50px" alt="">
+                </td>
+                <td>{{data.camera.name}}</td>
+                <td>{{data.rover.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
